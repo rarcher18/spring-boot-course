@@ -1,18 +1,17 @@
 package guru.springframework;
 
-public class Dollar extends Money {
+public class Franc extends Money {
 
-    public Dollar(int amount) {
+    public Franc(int amount) {
         this.amount = amount;
     }
 
     @Override
     protected String currency() {
-        return "USD";
+        return "CHF";
     }
 
     public Money times(int multiplier) {
-         return new Dollar(amount * multiplier);
+        return new Franc(amount * multiplier);
     }
-
 }
