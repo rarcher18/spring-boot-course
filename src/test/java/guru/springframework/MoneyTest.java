@@ -55,7 +55,7 @@ public class MoneyTest {
     void testReduceSum() {
         Expression sum = new Sum(Money.dollar(3), Money.dollar(4));
         Bank bank =new Bank();
-        Money result = bank.reduce(Money.dollar(1), "USD");
+        Money result = bank.reduce(sum, "USD");
         assertEquals(Money.dollar(7), result);
     }
 
